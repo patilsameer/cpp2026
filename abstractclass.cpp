@@ -18,12 +18,7 @@ private:
 	double radius;
 
 public:
-	Circle(double r) : radius(r) {}
-
-	double area() const override {
-		double pi = 3.141592653589793;
-		return pi * radius * radius;
-	}
+	//write your code here
 };
 
 class Rectangle : public Shape {
@@ -32,11 +27,7 @@ private:
 	double width;
 
 public:
-	Rectangle(double l, double w) : length(l), width(w) {}
-
-	double area() const override {
-		return length * width;
-	}
+	//write your code here
 };
 
 int main() {
