@@ -1,0 +1,121 @@
+C++ OOP LAB TEST – DETAILED PROBLEM STATEMENTS
+Questions 11 to 20
+
+============================================================
+QUESTION 11: LIBRARY BOOK ISSUE MANAGEMENT SYSTEM
+============================================================
+
+A college library wants to develop a simple book issue management system. For every book, the system should store a unique book ID, title, author name, price, and an availability status indicating whether the book is currently available for issue. The availability information should be maintained internally by the program and should not be modified directly from outside the class.
+
+The program should maintain information for multiple books using an array of objects. Suitable constructors should be provided to initialize book information. The program should provide functions to accept book details, display complete book information, issue a book, return a book, and obtain the book ID for searching purposes.
+
+When a user requests a book, the program should ask for the book ID and search the collection. If the requested book is available, it should be issued and its availability status should be changed. If the book is already issued, the program should display an appropriate message. Similarly, when a book is returned, its availability status should be restored.
+
+The main program should be menu driven and repeatedly display options such as:
+1. Enter book details
+2. Display all books
+3. Issue a book
+4. Return a book
+5. Exit
+
+The program should continue executing until the user selects the exit option.
+
+
+============================================================
+QUESTION 12: ELECTRICITY BILL GENERATION SYSTEM
+============================================================
+
+An electricity distribution company wants to develop a program for preparing monthly electricity bills for its customers. Each customer record should contain a consumer number, customer name, number of electricity units consumed during the month, and the calculated bill amount.
+
+The electricity bill should be calculated using the following slab rates:
+- First 100 units: Rs. 2 per unit
+- Next 200 units: Rs. 4 per unit
+- Units above 300: Rs. 6 per unit
+
+For example, if a customer consumes 350 units, the first 100 units should be charged at Rs. 2 per unit, the next 200 units at Rs. 4 per unit, and the remaining 50 units at Rs. 6 per unit.
+
+The number of customers should be entered by the user at runtime. Since the number is not known in advance, the required customer objects should be created dynamically using appropriate dynamic memory allocation. The program should provide functions to accept customer details, calculate the bill, return the bill amount, and display complete customer information.
+
+The program should also be able to compare the bills of all customers and display the details of the customer having the highest electricity bill.
+
+The main program should provide a menu with operations such as:
+1. Enter customer details
+2. Calculate bills for all customers
+3. Display all customer records
+4. Display the customer having the highest bill
+5. Exit
+
+Before program termination, all dynamically allocated memory should be released properly.
+
+
+============================================================
+QUESTION 13: VEHICLE RENTAL MANAGEMENT SYSTEM
+============================================================
+
+A vehicle rental company rents different types of vehicles such as cars and bikes. All vehicles have some common information including vehicle number, brand name, and rental charge per day. However, cars additionally store the number of seats, whereas bikes additionally store the engine capacity in CC.
+
+Design an inheritance-based solution in which the common vehicle information is maintained in a base class and the specific information for cars and bikes is maintained in separate derived classes.
+
+The program should provide functions to accept and display the common vehicle information. Each derived class should provide its own functions to accept and display its additional information. Both car and bike classes should also provide a function to calculate the rental amount based on the number of days for which the vehicle is rented.
+
+The rental calculation function should use a default argument so that, if the number of rental days is not explicitly provided, the program assumes that the vehicle is rented for one day.
+
+The program should be menu driven and should provide operations such as:
+1. Enter car details
+2. Enter bike details
+3. Calculate car rental amount
+4. Calculate bike rental amount
+5. Display car details
+6. Display bike details
+7. Exit
+
+The program should repeatedly display the menu until the user selects the exit option.
+
+
+============================================================
+QUESTION 14: ONLINE SHOPPING CART
+============================================================
+
+An online shopping application wants to maintain a customer's shopping cart. Each product added to the cart should contain a product ID, product name, unit price, and quantity purchased. The application should be able to manage several products using an array of product objects.
+
+The program should provide functions to accept and display product information. It should also provide a function to calculate the total cost of a particular product by multiplying its unit price by its quantity.
+
+A separate function outside the class should receive a product object by reference and update the quantity of the original product. Another function should receive a product object as a constant reference and display the product details without allowing any modification to the object.
+
+The program should allow the user to change the quantity of a selected product and should recalculate the total shopping cart bill after the change. The total cart bill should be obtained by adding the individual totals of all products.
+
+The main program should provide a menu containing operations such as:
+1. Enter product details
+2. Display all products
+3. Update the quantity of a product
+4. Calculate and display the total shopping cart bill
+5. Exit
+
+The program should continue to display the menu until the user chooses to exit.
+
+
+============================================================
+QUESTION 15: HOSPITAL PATIENT BILLING SYSTEM
+============================================================
+
+A hospital wants to maintain information about admitted patients and calculate their final hospital bills. Basic patient information such as patient ID, patient name, and age is common to all patients. An admitted patient additionally has room charge per day, number of days admitted, doctor consultation charges, and medicine charges.
+
+Design the program using inheritance. Store the common patient information in a base class and the hospitalization and billing information in a derived class.
+
+The program should provide functions to accept and display patient information. The derived class should calculate the hospital bill using the following components:
+
+Total Bill =
+(Room Charge Per Day × Number of Days Admitted)
++ Doctor Consultation Charges
++ Medicine Charges
+
+The program should maintain information for multiple admitted patients using an array of objects. It should display the details and calculated bill of each patient. It should also compare the bills and identify the patient having the highest total hospital bill.
+
+The main program should be menu driven with options such as:
+1. Enter patient details
+2. Display all patient details
+3. Calculate and display hospital bills
+4. Find and display the patient having the highest bill
+5. Exit
+
+The menu should continue until the user selects the exit option.
