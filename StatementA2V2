@@ -1,0 +1,652 @@
+QUESTION 1: MATRIX OPERATIONS
+
+Problem Statement
+
+Design and implement a menu-driven C++ program to perform various mathematical and analytical operations on matrices using a class.
+
+Create a class named Matrix to represent a matrix. The class should maintain the following information:
+- Number of rows
+- Number of columns
+- Matrix elements
+
+The number of rows and columns should be entered by the user at runtime. Since the matrix dimensions are not known during compilation, memory for storing matrix elements must be allocated dynamically using pointers.
+
+The class should provide suitable member functions to perform the following operations.
+
+1. Enter Matrix
+Allow the user to specify the number of rows and columns of the matrix and then enter all matrix elements.
+
+Example:
+Rows = 2
+Columns = 3
+
+Matrix:
+1 2 3
+4 5 6
+
+The program should correctly allocate the required memory before accepting the elements.
+
+2. Display Matrix
+Display the matrix in proper row-and-column format.
+
+Example:
+1  2  3
+4  5  6
+
+3. Find Largest Element
+Traverse all elements of the matrix and determine the largest value present.
+
+Example:
+5   8   2
+11  4   7
+
+Largest Element = 11
+
+4. Find Smallest Element
+Traverse the complete matrix and determine the smallest value present.
+
+For the above matrix:
+Smallest Element = 2
+
+5. Calculate Sum of All Elements
+Calculate the sum of every element present in the matrix.
+
+Example:
+1 2
+3 4
+
+Sum = 1 + 2 + 3 + 4 = 10
+
+6. Row-wise Sum
+Calculate and display the sum of elements present in every individual row.
+
+Example:
+1  2  3
+4  5  6
+
+Output:
+Sum of Row 1 = 6
+Sum of Row 2 = 15
+
+7. Column-wise Sum
+Calculate and display the sum of elements present in every individual column.
+
+Output:
+Sum of Column 1 = 5
+Sum of Column 2 = 7
+Sum of Column 3 = 9
+
+8. Matrix Transpose
+Generate and display the transpose of the matrix.
+
+Original Matrix:
+1  2  3
+4  5  6
+
+Transpose:
+1  4
+2  5
+3  6
+
+If the original matrix has dimensions m x n, the transpose must have dimensions n x m.
+
+9. Addition of Two Matrices
+Allow the user to enter two matrices and calculate their addition.
+
+Matrix addition is possible only when both matrices have exactly the same dimensions.
+
+Example:
+A =
+1 2
+3 4
+
+B =
+5 6
+7 8
+
+A + B =
+6  8
+10 12
+
+Before performing addition, verify:
+Rows of A = Rows of B
+Columns of A = Columns of B
+
+If the dimensions are incompatible, display an appropriate error message.
+
+10. Matrix Multiplication
+Allow the user to enter two matrices and multiply them.
+
+Matrix multiplication is possible only when:
+Number of columns of Matrix A = Number of rows of Matrix B
+
+Implement matrix multiplication using three nested loops.
+
+For every result element:
+C[i][j] = A[i][0] * B[0][j] + A[i][1] * B[1][j] + ...
+
+If the matrices cannot be multiplied, display an appropriate message.
+
+Resource Management Requirement
+- Memory should be allocated according to matrix dimensions.
+- Previously allocated memory should be handled correctly if another matrix is entered.
+- All allocated memory must be released before an object is destroyed.
+- A destructor should be used for proper memory cleanup.
+
+Expected Menu
+
+===== MATRIX OPERATIONS MENU =====
+
+1. Enter Matrix
+2. Display Matrix
+3. Find Largest Element
+4. Find Smallest Element
+5. Calculate Sum of All Elements
+6. Display Row-wise Sum
+7. Display Column-wise Sum
+8. Display Transpose
+9. Add Two Matrices
+10. Multiply Two Matrices
+11. Exit
+
+The menu must be implemented using a loop and switch-case statement.
+The program must continue displaying the menu after every operation and should terminate only when the user selects Option 11 - Exit.
+
+
+============================================================
+
+QUESTION 2: EMPLOYEE PERFORMANCE EVALUATION
+
+Problem Statement
+
+A company wants to develop a C++ application to evaluate employee performance and automatically provide a salary increment to eligible employees.
+
+Create a class named Employee that maintains the following employee information:
+- Employee ID
+- Employee name
+- Current salary
+- Three performance scores
+
+The three performance scores represent:
+1. Technical Skill
+2. Communication Skill
+3. Teamwork
+
+The performance scores must not be stored using a normal fixed-size array. Instead, declare a pointer inside the class and dynamically allocate memory for exactly three performance scores when required.
+
+Employee Details
+The program should allow the user to enter:
+Employee ID
+Employee Name
+Current Salary
+
+Example:
+Employee ID   : 101
+Employee Name : Rahul Patil
+Salary        : 45000
+
+Performance Scores
+The user should enter three performance scores:
+Technical Skill Score
+Communication Skill Score
+Teamwork Score
+
+You may assume that scores are given on a scale of 0 to 100.
+The program should reject or report values outside the valid range.
+
+Calculate Average Performance
+
+Average = (Technical + Communication + Teamwork) / 3
+
+Example:
+85 + 78 + 90 = 253
+Average = 253 / 3 = 84.33
+
+Employee Performance Evaluation
+Create a separate function outside the Employee class to evaluate an employee.
+
+The function should receive an Employee object by reference.
+
+If:
+Average Performance Score >= 75
+
+then increase the employee's current salary by 10%.
+
+Example:
+Current Salary = 50000
+Increment      = 10%
+Increment Amount = 5000
+Updated Salary   = 55000
+
+If the average score is below 75, display a message indicating that the employee is not eligible for an increment and keep the salary unchanged.
+
+Salary Increment Function
+Provide a member function that accepts a percentage value and increases salary accordingly.
+
+Display Employee Information
+
+Example:
+Employee ID             : 101
+Employee Name           : Rahul Patil
+Technical Skill         : 85
+Communication Skill     : 78
+Teamwork                : 90
+Average Performance     : 84.33
+Current Salary          : 49500
+Performance Status      : Eligible for Increment
+
+Dynamic Memory Requirement
+The program should demonstrate:
+- Pointer declaration inside the class
+- Dynamic memory allocation
+- Accessing values through allocated memory
+- Proper memory deallocation
+- Use of a destructor
+
+Expected Menu
+
+===== EMPLOYEE PERFORMANCE MENU =====
+
+1. Enter Employee Details
+2. Enter Performance Scores
+3. Calculate and Display Average Score
+4. Evaluate Employee and Update Salary
+5. Display Employee Details
+6. Exit
+
+The program should repeatedly display this menu using a loop.
+Use a switch-case statement to execute the selected operation.
+The program should terminate only when Option 6 - Exit is selected.
+
+
+============================================================
+
+QUESTION 3: NUMBER ANALYSIS USING AN INTEGER CLASS
+
+Problem Statement
+
+Design and implement a menu-driven C++ program that performs various mathematical analyses on a user-entered integer.
+
+Create a class named IntegerNumber or any suitable name that stores a single integer value.
+
+Once the user enters a number, all mathematical operations should be performed on that same number until the user chooses to replace it with another number.
+
+1. Enter or Change Number
+Allow the user to enter an integer.
+
+Example:
+Enter number: 153
+
+2. Prime Number Check
+Determine whether the entered number is prime.
+
+A prime number:
+- Must be greater than 1.
+- Must have exactly two positive divisors: 1 and itself.
+
+Examples:
+2   -> Prime
+7   -> Prime
+11  -> Prime
+15  -> Not Prime
+1   -> Not Prime
+
+The program should efficiently check divisibility. It is sufficient to check possible divisors up to the square root of the number.
+
+3. Palindrome Number Check
+Determine whether the number is a palindrome.
+
+Examples:
+121  -> Palindrome
+1331 -> Palindrome
+123  -> Not Palindrome
+
+The program should generate the reverse mathematically rather than converting the value into a string.
+
+4. Armstrong Number Check
+Determine whether the number is an Armstrong number.
+
+For an n-digit number:
+1. Count the number of digits.
+2. Separate each digit.
+3. Raise each digit to the power n.
+4. Calculate their sum.
+5. Compare the result with the original number.
+
+Example:
+153
+
+1^3 + 5^3 + 3^3
+= 1 + 125 + 27
+= 153
+
+Therefore, 153 is an Armstrong Number.
+
+5. Perfect Number Check
+Determine whether the number is a perfect number.
+
+A perfect number is equal to the sum of all positive divisors excluding the number itself.
+
+Example:
+6
+
+Factors excluding 6:
+1, 2, 3
+
+1 + 2 + 3 = 6
+
+Therefore, 6 is a Perfect Number.
+
+6. Factorial
+Calculate the factorial of the entered number.
+
+n! = n x (n-1) x ... x 2 x 1
+
+Example:
+5! = 5 x 4 x 3 x 2 x 1 = 120
+
+Also:
+0! = 1
+
+If the entered value is negative, display an appropriate message.
+
+7. Count Number of Digits
+
+Examples:
+52786 -> 5 digits
+95    -> 2 digits
+7     -> 1 digit
+
+The value 0 should be considered a one-digit number.
+
+8. Calculate Sum of Digits
+
+Example:
+Number = 5274
+5 + 2 + 7 + 4 = 18
+
+9. Reverse Number
+
+Example:
+Input  : 12345
+Output : 54321
+
+The reversal should be performed using arithmetic operations such as % and /.
+
+Expected Menu
+
+===== NUMBER ANALYSIS MENU =====
+
+1. Enter / Change Number
+2. Check Prime Number
+3. Check Palindrome Number
+4. Check Armstrong Number
+5. Check Perfect Number
+6. Calculate Factorial
+7. Count Digits
+8. Calculate Sum of Digits
+9. Reverse Number
+10. Exit
+
+The program must use a loop and switch-case structure.
+After completing an operation, display the menu again.
+The program should terminate only when the user selects Option 10 - Exit.
+
+If the user tries to perform an operation before entering a number, display an appropriate message asking the user to enter a number first.
+
+
+============================================================
+
+QUESTION 4: GCD, LCM AND COMMON FACTORS OF TWO NUMBERS
+
+Problem Statement
+
+Design a C++ program that performs mathematical operations on a pair of positive integers.
+
+Create a class named NumberPair or any suitable name containing two integer data members.
+
+The user should enter two positive integers, after which the program should provide operations related to their divisibility and common factors.
+
+1. Enter Two Numbers
+
+Example:
+Enter first number  : 48
+Enter second number : 18
+
+The values should be greater than zero.
+
+2. Calculate Greatest Common Divisor
+
+Calculate the Greatest Common Divisor (GCD) using the Euclidean Algorithm.
+
+Example:
+Numbers = 48 and 18
+
+48 % 18 = 12
+18 % 12 = 6
+12 % 6  = 0
+
+GCD = 6
+
+The program should not calculate the GCD by checking every possible number one by one.
+
+General logic:
+while second number is not zero
+    remainder = first % second
+    first = second
+    second = remainder
+
+3. Calculate Least Common Multiple
+
+Use:
+LCM = (Number1 x Number2) / GCD
+
+Example:
+Numbers = 48 and 18
+GCD = 6
+
+LCM = (48 x 18) / 6
+    = 144
+
+4. Display Common Factors
+
+Example:
+Number1 = 24
+Number2 = 36
+
+Common factors:
+1, 2, 3, 4, 6, 12
+
+5. Check Whether Numbers Are Relatively Prime
+
+Two positive integers are relatively prime when their GCD is equal to 1.
+
+Example:
+8 and 15
+GCD = 1
+Therefore, they are relatively prime.
+
+12 and 18
+GCD = 6
+Therefore, they are not relatively prime.
+
+Use the GCD function to determine this condition.
+
+6. Enter New Numbers
+The user should be able to replace the current number pair without restarting the program.
+
+Expected Menu
+
+===== NUMBER OPERATIONS MENU =====
+
+1. Enter Two Numbers
+2. Calculate GCD
+3. Calculate LCM
+4. Display Common Factors
+5. Check Whether Numbers are Relatively Prime
+6. Enter New Numbers
+7. Exit
+
+The menu must be implemented using a loop and switch-case statement.
+If the user selects an operation before entering valid numbers, display:
+Please enter two numbers first.
+
+The program should terminate only when Option 7 - Exit is selected.
+
+
+============================================================
+
+QUESTION 5: DYNAMIC INVENTORY MANAGEMENT
+
+Problem Statement
+
+A warehouse wants to develop a C++ application for maintaining information about products available in its inventory.
+
+Each product should contain:
+- Product code
+- Product name
+- Available quantity
+- Unit price
+
+Create a class named Product that represents one product in the inventory.
+
+The number of products available in the warehouse is not known during program compilation. Therefore, the program must first ask the user to enter the number of products and then dynamically allocate memory for the required number of Product objects.
+
+Example:
+Enter number of products: 5
+
+Product Details
+
+For every product, accept:
+Product Code
+Product Name
+Available Quantity
+Unit Price
+
+Example:
+Product Code      : 1001
+Product Name      : Keyboard
+Available Quantity: 25
+Unit Price        : 850.00
+
+Product codes should uniquely identify products.
+Quantity should not be negative, and product price should be greater than or equal to zero.
+
+1. Enter Product Details
+
+Example:
+Product 1
+---------
+Code     : 101
+Name     : Keyboard
+Quantity : 20
+Price    : 850
+
+Product 2
+---------
+Code     : 102
+Name     : Mouse
+Quantity : 35
+Price    : 450
+
+2. Display Complete Inventory
+
+Example:
+------------------------------------------------------------
+Code      Name               Quantity          Price
+------------------------------------------------------------
+101       Keyboard              20             850.00
+102       Mouse                 35             450.00
+103       Monitor                8           12500.00
+------------------------------------------------------------
+
+3. Search Product Using Product Code
+
+Create a separate search function that searches the dynamically allocated collection of products using a product code.
+
+The function should provide access to the original Product object rather than returning a separate copy.
+
+Example:
+Enter product code to search: 102
+
+Product Found
+
+Code     : 102
+Name     : Mouse
+Quantity : 35
+Price    : 450
+
+If no matching code is found, display:
+Product not found.
+
+Reference Requirement
+The search operation should demonstrate the use of references in C++.
+
+Any change made using the returned reference must be reflected in the actual inventory.
+
+4. Update Product Price
+
+Example:
+Enter Product Code : 102
+Current Price       : 450
+Enter New Price     : 475
+
+Output:
+Product price updated successfully.
+
+5. Update Product Quantity
+
+Example:
+Enter Product Code : 101
+Current Quantity    : 20
+Enter New Quantity  : 35
+
+The original Product object should now contain quantity 35.
+
+Product Class Functions
+The Product class should provide suitable functions for:
+- Accept product information
+- Display product information
+- Return product code
+- Update product price
+- Update product quantity
+- Return current price
+- Return current quantity
+
+Data members should preferably be kept private and accessed or modified through appropriate member functions.
+
+Dynamic Object Requirement
+The program should demonstrate:
+- Pointer to objects
+- Dynamic array of objects
+- Accessing dynamically allocated objects
+- Passing or returning objects using references
+- Searching objects in a dynamic collection
+- Updating the original object
+- Releasing dynamically allocated memory
+
+Memory Management
+Before program termination, all dynamically allocated memory must be released correctly.
+
+Expected Menu
+
+===== INVENTORY MANAGEMENT MENU =====
+
+1. Enter Product Details
+2. Display Complete Inventory
+3. Search Product by Product Code
+4. Update Product Price
+5. Update Product Quantity
+6. Exit
+
+The program must use a while/do-while loop and switch-case statement.
+
+Expected Program Behaviour
+The program should appropriately handle:
+- Attempting to display inventory before product details have been entered.
+- Searching for a product code that does not exist.
+- Entering an invalid product quantity.
+- Entering an invalid product price.
+- Updating a non-existing product.
+- Entering an invalid menu option.
+- Releasing all dynamically allocated memory before exiting.

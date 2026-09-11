@@ -1,0 +1,183 @@
+
+===========================================================
+QUESTION 1: Matrix Operations
+============================================================
+Design a C++ program to perform different mathematical and analytical operations on a matrix.
+
+Create a class that represents a matrix. The class should store the number of rows, number of columns, and the matrix elements. The number of rows and columns should be entered by the user at runtime, and memory for storing the matrix elements should be allocated dynamically.
+
+The program should allow the user to enter and display the matrix.
+
+Provide an operation to find the largest element present in the matrix and another operation to find the smallest element.
+
+The program should calculate the sum of all matrix elements.
+
+It should also calculate and display the sum of elements in each individual row and the sum of elements in each individual column.A
+
+The program should generate and display the transpose of the matrix. In the transpose, rows of the original matrix become columns and columns become rows.
+
+The program should also support operations involving two matrices.
+
+For matrix addition, the program should verify that both matrices have the same number of rows and columns. If the dimensions are incompatible, an appropriate message should be displayed.
+
+For matrix multiplication, verify that the number of columns in the first matrix is equal to the number of rows in the second matrix. Matrix multiplication should be implemented using nested loops.
+
+All dynamically allocated memory should be released properly before program termination.
+
+Expected Menu:
+
+===== MATRIX OPERATIONS MENU =====
+1. Enter Matrix
+2. Display Matrix
+3. Find Largest Element
+4. Find Smallest Element
+5. Calculate Sum of All Elements
+6. Display Row-wise Sum
+7. Display Column-wise Sum
+8. Display Transpose
+9. Add Two Matrices
+10. Multiply Two Matrices
+11. Exit
+
+The program should terminate only when option 11 is selected.
+
+
+============================================================
+QUESTION 2: EMPLOYEE PERFORMANCE EVALUATION
+============================================================
+
+A company wants to evaluate the performance of its employees. Each employee has an employee ID, employee name, salary, and three performance scores. The three scores represent:
+1. Technical skill
+2. Communication skill
+3. Teamwork
+
+The performance scores should not be stored in a fixed normal array. Instead, memory for the three scores should be allocated dynamically using a pointer when an employee object is created.
+
+The program should provide functions to accept employee details, accept the three performance scores, calculate the average performance score, increase the employee salary by a specified percentage, and display complete employee information.
+
+A separate function outside the class should receive an employee object by reference and evaluate its performance. If the employee's average score satisfies the required performance condition, the employee should receive a 10% salary increment. Otherwise, the salary should remain unchanged.
+
+The program should also demonstrate proper resource management by releasing the dynamically allocated memory using a destructor when the employee object is destroyed.
+
+The main program should be menu driven with operations such as:
+1. Enter employee details
+2. Enter performance scores
+3. Calculate and display average score
+4. Evaluate employee and update salary if eligible
+5. Display employee details
+6. Exit
+
+The menu should repeat until the user selects exit.
+
+
+============================================================
+QUESTION 3: NUMBER ANALYSIS USING AN INTEGER CLASS
+============================================================
+
+Design a C++ program to perform different mathematical analyses on an integer.
+
+Create a class that stores one integer value. The user should first enter a number and should then be able to perform different operations on the same number through a menu.
+
+The program should determine whether the number is prime. A prime number is greater than 1 and is divisible only by 1 and itself.
+
+The program should determine whether the number is a palindrome by reversing its digits and comparing the reversed value with the original number.
+
+The program should determine whether the number is an Armstrong number. For an n-digit number, each digit should be raised to the power n, and the resulting values should be added. If the sum is equal to the original number, it is an Armstrong number.
+
+Example:
+153 = 1^3 + 5^3 + 3^3
+
+Therefore, 153 is an Armstrong number.
+
+The program should also determine whether the number is a perfect number. A perfect number is equal to the sum of its positive divisors excluding the number itself.
+
+Example:
+6 = 1 + 2 + 3
+
+Therefore, 6 is a perfect number.
+
+Additional operations should calculate the factorial of the number, count the total number of digits, calculate the sum of digits, and generate the reverse of the number.
+
+The user should also be allowed to replace the current number with a new number without restarting the program.
+
+Expected Menu:
+
+===== NUMBER ANALYSIS MENU =====
+1. Enter / Change Number
+2. Check Prime Number
+3. Check Palindrome Number
+4. Check Armstrong Number
+5. Check Perfect Number
+6. Calculate Factorial
+7. Count Digits
+8. Calculate Sum of Digits
+9. Reverse Number
+10. Exit
+
+The program should terminate only when option 10 is selected.
+
+============================================================
+QUESTION 4: GCD, LCM AND COMMON FACTORS OF TWO NUMBERS
+============================================================
+
+Design a C++ program to perform mathematical operations on two positive integers.
+
+Create a class that stores two integer values.
+
+The program should calculate the Greatest Common Divisor using the Euclidean Algorithm.
+
+Example:
+48 and 18
+48 % 18 = 12
+18 % 12 = 6
+12 % 6 = 0
+GCD = 6
+
+The program should not calculate the GCD by simply checking every possible divisor.
+
+Using the calculated GCD, determine the Least Common Multiple using:
+LCM = (Number1 × Number2) / GCD
+
+The program should also identify and display all common factors of the two numbers.
+
+It should determine whether the two numbers are relatively prime. Two numbers are relatively prime when their GCD is equal to 1.
+
+The user should be allowed to enter a new pair of numbers without restarting the application.
+
+Expected Menu:
+
+===== NUMBER OPERATIONS MENU =====
+1. Enter Two Numbers
+2. Calculate GCD
+3. Calculate LCM
+4. Display Common Factors
+5. Check Whether Numbers are Relatively Prime
+6. Enter New Numbers
+7. Exit
+
+The program should terminate only when option 7 is selected.
+
+
+============================================================
+QUESTION 5: DYNAMIC INVENTORY MANAGEMENT
+============================================================
+
+A warehouse wants to develop a program to maintain its product inventory. Each product record should contain a product code, product name, available quantity, and unit price.
+
+The number of products stored in the warehouse is not known in advance. The user should first enter the number of products, and the required number of product objects should then be created dynamically.
+
+The program should provide functions to accept product information, display product information, return the product code, update the product price, and update the available quantity.
+
+A separate search function should search the dynamically created collection using a product code. If a matching product is found, the function should return a reference to the original product object. The returned reference should then be used to modify the product's price or quantity directly in the original inventory.
+
+The program should support the following operations:
+1. Enter product details
+2. Display complete inventory
+3. Search for a product using product code
+4. Update the price of a product
+5. Update the quantity of a product
+6. Exit
+
+When updating a product, the program should first search for it using its product code and then modify the original object through the returned reference.
+
+The main program should be menu driven using a loop and switch-case structure. Before the program terminates, all dynamically allocated memory used for the product objects should be released properly.
