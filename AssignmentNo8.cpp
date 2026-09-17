@@ -6,20 +6,15 @@ private:
     string taskname;
     int taskid;
     // you can add methods here
-
-
 public:
     // you can add methods here
     TimeDuration();
     TimeDuration(int h, int m);
     TimeDuration operator+(const TimeDuration &obj);
     TimeDuration operator-(const TimeDuration &obj);
-
     bool operator>(const TimeDuration &obj);
     bool operator==(const TimeDuration &obj);
-
     TimeDuration& operator++();
-
     friend istream& operator>>(istream &in, TimeDuration &obj);
     friend ostream& operator<<(ostream &out, const TimeDuration &obj);
 };
