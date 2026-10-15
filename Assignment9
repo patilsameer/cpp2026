@@ -1,0 +1,15 @@
+develop a program to read data from a text file, sample data is as below
+
+
+101 Ram 40 41 44 49
+102 Sham 41 42 44 43
+103 Keshav 38 33 42 45
+
+
+the first column is roll number, second column is name, 3rd to 6th columns are marks of subjects
+read the data from text file
+the program should have menu options to
+1. display subject wise merit list - (top to bottom)
+2. overall merit list
+3. name of the topper of any selected course
+4. name of the topper in all courses
