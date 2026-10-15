@@ -1,0 +1,20 @@
+Read the data from a text file. Sample data is as below
+
+
+1,Akash,19
+2,Gouri,15
+3,Sunil,21
+4,Shekhar,33
+5,Shifa,23
+
+
+first column is id, second column is name, third column is age
+- develop a program with following menu options
+1. display the list (youngest to oldest)
+2. display the list (oldest to youngest)
+3. Who can vote?
+4. Create a new file - with birth year
+
+in 4th option create a new text file where you will add 4th column which will have the year in which the person is born.
+
+
