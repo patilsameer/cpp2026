@@ -23,7 +23,7 @@ public:
 
 int main(){
     ifstream inFile("example.csv");
-    ofstream outFile("data.bin", ios::binary);
+    ofstream outFile("data.bin", ios::binary | ios::out);
 
     if (!inFile) {
         cerr << "Unable to open file data.csv";
