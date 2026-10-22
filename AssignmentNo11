@@ -1,0 +1,30 @@
+Read the data from a text file. Sample data is as below
+
+
+1,Akash,19
+2,Gouri,15
+3,Sunil,21
+4,Shekhar,33
+5,Shifa,23
+
+Assignement is devided in two program. 
+
+first program
+
+Develop a program which can read the data from csv format file.
+first column is id, second column is name and third column is age.
+
+create class Person{} with these fields and every entry in the csv file shall be converted 
+into an object of Person.
+
+Write these all objects into a binary file.
+
+
+second program - 
+first program have created a binary file, in which all objects are written. 
+Develop  a program which can readback these objects from file into an object of class Person.
+provide the below listed menu options.
+
+1. add New object - create new object of Person and add it at the end of the file.
+2. display all objects- display all objects which are present in the file. 
+3. display all objects who are eligible for voting ( all objects where age value > 17)
