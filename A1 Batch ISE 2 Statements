@@ -24,3 +24,19 @@ the output will be
 
 
 
+------------------------------
+
+
+a file contains words list - example
+
+car
+cat
+call
+bat
+ball
+bar
+
+
+- read the list of words from text file and create a tri-node data structure, 
+refere the png file - trienodediag.png
+
